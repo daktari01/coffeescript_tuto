@@ -5,7 +5,7 @@
   Multiline comment
   In coffeescript
   */
-  var aString, csOutput, name;
+  var aString, areYouHappy, csOutput, largeNumStr, largestNum, name, smallNumStr, smallestNum;
 
   name = "Phil";
 
@@ -15,8 +15,22 @@
 
   aString = "I am a string";
 
+  largestNum = Number.MAX_VALUE;
+
+  smallestNum = Number.MIN_VALUE;
+
+  largeNumStr = `The largest number is ${largestNum}<br/>`;
+
+  smallNumStr = `The smallest number is ${smallestNum}<br/>`;
+
   if (typeof aString === 'string') {
-    csOutput.insertAdjacentHTML('beforeend', ' aString is a String <br>');
+    csOutput.insertAdjacentHTML('beforeend', largeNumStr + '<br> and ' + smallNumStr);
+  }
+
+  areYouHappy = false;
+
+  if (typeof areYouHappy === 'boolean') {
+    csOutput.insertAdjacentHTML('beforeend', 'areYouHappy is a boolean' + '<br> ');
   }
 
 }).call(this);
