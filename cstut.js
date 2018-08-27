@@ -5,12 +5,18 @@
   Multiline comment
   In coffeescript
   */
-  var csOutput, name;
+  var aString, csOutput, name;
 
   name = "Phil";
 
   csOutput = document.getElementById("csoutput");
 
-  csOutput.innerHTML = `Hello ${name}`;
+  csOutput.innerHTML = `Hello ${name}<br/>`;
+
+  aString = "I am a string";
+
+  if (typeof aString === 'string') {
+    csOutput.insertAdjacentHTML('beforeend', ' aString is a String <br>');
+  }
 
 }).call(this);
